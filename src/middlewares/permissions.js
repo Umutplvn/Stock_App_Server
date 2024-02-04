@@ -8,7 +8,7 @@ module.exports = {
 
     isLogin: (req, res, next) => {
 
-        if (req.user && req.user.is_active) {
+        if (req.user) {
 
             next()
 

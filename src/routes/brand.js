@@ -12,11 +12,11 @@ const brand = require('../controllers/brand')
 // URL: /brands
 
 router.route('/')
-    .get(permissions.isStaff, brand.list)
+    .get(permissions.isLogin, brand.list)
     .post(permissions.isStaff, brand.create)
 
 router.route('/:id')
-    .get(permissions.isStaff, brand.read)
+    .get(permissions.isLogin, brand.read)
     .put(permissions.isAdmin, brand.update)
     .patch(permissions.isAdmin, brand.update)
     .delete(permissions.isAdmin, brand.delete)
