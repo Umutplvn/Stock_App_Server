@@ -13,13 +13,13 @@ const product = require('../controllers/product')
 
 router.route('/')
     .get(permissions.isLogin, product.list)
-    .post(permissions.isStaff, product.create)
+    .post(permissions.isLogin, product.create)
 
 router.route('/:id')
     .get(permissions.isLogin, product.read)
-    .put(permissions.isStaff, product.update)
-    .patch(permissions.isStaff, product.update)
-    .delete(permissions.isAdmin, product.delete)
+    .put(permissions.isLogin, product.update)
+    .patch(permissions.isLogin, product.update)
+    .delete(permissions.isLogin, product.delete)
 
 /* ------------------------------------------------------- */
 module.exports = router

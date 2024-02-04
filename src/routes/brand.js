@@ -13,13 +13,13 @@ const brand = require('../controllers/brand')
 
 router.route('/')
     .get(permissions.isLogin, brand.list)
-    .post(permissions.isStaff, brand.create)
+    .post(permissions.isLogin, brand.create)
 
 router.route('/:id')
     .get(permissions.isLogin, brand.read)
-    .put(permissions.isAdmin, brand.update)
-    .patch(permissions.isAdmin, brand.update)
-    .delete(permissions.isAdmin, brand.delete)
+    .put(permissions.isLogin, brand.update)
+    .patch(permissions.isLogin, brand.update)
+    .delete(permissions.isLogin, brand.delete)
 
 /* ------------------------------------------------------- */
 module.exports = router

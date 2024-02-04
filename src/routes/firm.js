@@ -13,13 +13,13 @@ const firm = require('../controllers/firm')
 
 router.route('/')
     .get(permissions.isLogin, firm.list)
-    .post(permissions.isStaff, firm.create)
+    .post(permissions.isLogin, firm.create)
 
 router.route('/:id')
     .get(permissions.isLogin, firm.read)
-    .put(permissions.isStaff, firm.update)
-    .patch(permissions.isStaff, firm.update)
-    .delete(permissions.isAdmin, firm.delete)
+    .put(permissions.isLogin, firm.update)
+    .patch(permissions.isLogin, firm.update)
+    .delete(permissions.isLogin, firm.delete)
 
 /* ------------------------------------------------------- */
 module.exports = router
