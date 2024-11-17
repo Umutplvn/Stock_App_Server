@@ -110,3 +110,5 @@ app.listen(PORT, () => console.log(`http://${HOST}:${PORT}`))
 /* ------------------------------------------------------- */
 // Syncronization (must be in commentLine):
 // require('./src/helpers/sync')() // !!! It clear database.
+
+module.exports=app
