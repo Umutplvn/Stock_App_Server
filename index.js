@@ -28,7 +28,6 @@ dbConnection()
 
 // Accept JSON:
 app.use(express.json())
-app.use(require('cors')())
 
 // CORS Middleware:
 // https://expressjs.com/en/resources/middleware/cors.html
