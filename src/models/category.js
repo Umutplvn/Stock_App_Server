@@ -2,7 +2,7 @@
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
-const { mongoose } = require('../configs/dbConnection')
+const mongoose = require('mongoose')
 /* ------------------------------------------------------- *
 {
     "name": "Category 1"

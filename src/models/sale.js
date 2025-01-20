@@ -2,7 +2,7 @@
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
-const { mongoose } = require('../configs/dbConnection')
+const mongoose = require('mongoose')
 /* ------------------------------------------------------- *
 {
     "brand_id": "65343222b67e9681f937f123",
